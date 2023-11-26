@@ -12,7 +12,7 @@ import { navIcons, navigationitems } from '../../utils/constants'
 
 const renderNavItems = () => {
     return navigationitems.map(item => (
-        <Styled.NavItem key={item.id}>{item.label}</Styled.NavItem>
+        <Styled.NavItem key={item.id} href={item.route}>{item.label}</Styled.NavItem>
     ))
 }
 const renderNavIcons = () => {

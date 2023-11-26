@@ -2,10 +2,10 @@ import {User, Fav, Cart} from '../assets//icons'
 
 
 export const navigationitems = [
-    {id: 'inicio', label: 'Inicio'},
-    {id: 'nosotros', label: 'Nosotros'},
-    {id: 'productos', label: 'Productos'},
-    {id: 'contacto', label: 'Contacto'},
+    {id: 'inicio', label: 'Inicio', route: '/home'},
+    {id: 'nosotros', label: 'Nosotros', route: '/nosotros'},
+    {id: 'productos', label: 'Productos', route: '/productos'},
+    {id: 'contacto', label: 'Contacto', route: '/contacto'},
 ]
 
 export const navIcons = [
