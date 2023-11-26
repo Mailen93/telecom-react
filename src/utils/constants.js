@@ -1,4 +1,4 @@
-import { User, Fav, Cart } from "../assets//icons";
+import { User, Fav, Cart, Facebook, LinkedIn, Twitter, GooglePlus, Youtube } from "../assets//icons";
 import {
   ConEsoNo,
   Decisiones,
@@ -158,3 +158,18 @@ export const footerContent = [
     ],
   },
 ];
+
+export const footerIcons = [
+  {
+    id: 'facebook', icon: Facebook, link: 'https://www.facebook.com/?locale=es_LA'
+  },
+  {
+    id: 'linkedIn', icon: LinkedIn, link: 'https://www.linkedin.com/in/mlabarrere/'
+  },
+  {
+    id: 'twitter', icon: Twitter, link: 'https://twitter.com/?lang=es'
+  },
+  {
+    id: 'youtube', icon: Youtube, link: 'https://www.youtube.com/?app=desktop&gl=AR&hl=es'
+  },
+]
