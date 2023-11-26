@@ -17,4 +17,11 @@ export const FooterInfoContainer = styled.div`
     margin-top: 40px;
 `
 
+export const FooterMap = styled.iframe`
+    width: 80%;
+    height: 300px;
+    margin: 40px 0;
+`
+
+
 

@@ -136,7 +136,7 @@ export const footerContent = [
     id: "us",
     title: "Nosotros",
     content:
-      "Creemos fervientemente en la importancia de la conexión humana, la risa y la camaradería en la era digital actual. Nuestro objetivo es ofrecerte una amplia gama de juegos de mesa diseñados especialmente para adultos, que te permitirán desconectar de las pantallas y sumergirte en experiencias de juego auténticas e inolvidables.",
+      "Creemos fervientemente en la importancia de la conexión humana, la risa y la camaradería en la era digital actual. Nuestro objetivo es ofrecerte una amplia gama de juegos de mesa diseñados especialmente para adultos.",
   },
   {
     id: "help",
