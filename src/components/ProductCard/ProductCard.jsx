@@ -1,5 +1,5 @@
 // React
-import React from "react";
+import React, { useCallback } from "react";
 
 // Styles
 import * as Styled from "./style";
@@ -10,28 +10,33 @@ import { buttons } from "../../utils/constants";
 // Assets
 import { UserGreen } from "../../assets/icons";
 
-const ProductCard = ({ image, title, players, playersAge, detail, price }) => {
+const ProductCard = ({product}) => {
+
+  const handleBuy = useCallback((product) => {
+    console.log(product)
+  }, [])
+
   return (
     <Styled.CardBody>
       <Styled.CardImageWrapper>
-        <Styled.CardImage src={image} alt={image} />
+        <Styled.CardImage src={product.image} alt={product.image} />
       </Styled.CardImageWrapper>
 
-      <Styled.CardTitle>{title}</Styled.CardTitle>
+      <Styled.CardTitle>{product.name}</Styled.CardTitle>
       <Styled.Divider />
       <Styled.CardDetailWrapper>
         <Styled.PlayersDetail>
           <Styled.PlayerIcon src={UserGreen} alt="user-icon" />
           <Styled.Players>
-            {players}
-            <Styled.PlayersAge>{`( +${playersAge} Años )`}</Styled.PlayersAge>
+            {product.players}
+            <Styled.PlayersAge>{`( +${product.age} Años )`}</Styled.PlayersAge>
           </Styled.Players>
         </Styled.PlayersDetail>
-        <Styled.Detail>{detail}</Styled.Detail>
-        <Styled.Price>AR$ {price}</Styled.Price>
+        <Styled.Detail>{product.description}</Styled.Detail>
+        <Styled.Price>AR$ {product.price}</Styled.Price>
         <Styled.ButtonsWrapper>
           {buttons.map((button) => (
-            <Styled.Button $type={button.id} key={button.id}>
+            <Styled.Button $type={button.id} key={button.id} onClick={button.id === 'comprar' ? () => {handleBuy(product)} : null}>
               {button.label}
             </Styled.Button>
           ))}

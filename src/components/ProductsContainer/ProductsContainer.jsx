@@ -22,12 +22,7 @@ const ProductsContainer = ({ title }) => {
         {products?.map((product) => (
           <ProductCard
             key={product.id}
-            image={product.image}
-            title={product.name}
-            players={product.players}
-            playersAge={product.age}
-            detail={product.description}
-            price={product.price}
+            product={product}
           />
         ))}
       </Styled.ProductsContainer>
