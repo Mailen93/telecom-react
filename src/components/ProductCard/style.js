@@ -5,7 +5,7 @@ export const CardBody = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border: 2px solid ${theme.colors.primaryRed};
+    border: 3px solid ${theme.colors.primaryRed};
     padding: 20px;
     justify-content: space-between;
     height: 520px;
