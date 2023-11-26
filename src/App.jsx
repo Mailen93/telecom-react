@@ -1,17 +1,22 @@
 // React Router
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Pages
-import Home from './pages/Home'
+import Home from "./pages/Home";
+
+// Contexts
+import { ProductsProvider } from "./contexts/ProductsContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  )
+    <ProductsProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </ProductsProvider>
+  );
 }
 
-export default App
+export default App;

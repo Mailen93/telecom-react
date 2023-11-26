@@ -18,8 +18,8 @@ const renderFooterBlocks = () => {
 
 const renderIcons = () => {
   return footerIcons.map((icon) => (
-    <Styled.SocialMediaLinks href={icon.link} target="_blank">
-      <Styled.FooterIcon key={icon.id} src={icon.icon} />
+    <Styled.SocialMediaLinks key={icon.id} href={icon.link} target="_blank">
+      <Styled.FooterIcon  src={icon.icon} />
     </Styled.SocialMediaLinks>
   ));
 };
