@@ -4,13 +4,16 @@ import theme from '../../utils/theme'
 export const CardBody = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     border: 2px solid ${theme.colors.primaryRed};
     padding: 20px;
     justify-content: space-between;
     height: 520px;
     border-radius: 8px;
-    max-width: 350px;
+    max-width: 400px;
+    box-shadow: 14px 16px 44px 1px rgba(0,0,0,0.48);
+-webkit-box-shadow: 14px 16px 44px 1px rgba(0,0,0,0.48);
+-moz-box-shadow: 14px 16px 44px 1px rgba(0,0,0,0.48);
 `
 export const CardImageWrapper = styled.div`
    width: 100%;
@@ -33,7 +36,7 @@ export const CardTitle  = styled.h2`
 
 export const Divider = styled.div`
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: gray;
 `
 
@@ -77,6 +80,8 @@ export const Price = styled.p`
 export const ButtonsWrapper = styled.div`
     display: flex;
     gap: 10px;
+    width: 100%;
+    margin-top: 10px;
 `
 
 export const Button = styled.button`

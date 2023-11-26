@@ -29,7 +29,7 @@ export const ProductsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 50px;
 `

@@ -24,7 +24,7 @@ const ProductCard = ({ image, title, players, playersAge, detail, price }) => {
           <Styled.PlayerIcon src={UserGreen} alt="user-icon" />
           <Styled.Players>
             {players}
-            <Styled.PlayersAge>+{playersAge}</Styled.PlayersAge>
+            <Styled.PlayersAge>{`( +${playersAge} Años )`}</Styled.PlayersAge>
           </Styled.Players>
         </Styled.PlayersDetail>
         <Styled.Detail>{detail}</Styled.Detail>
