@@ -10,9 +10,11 @@ export const FooterBody = styled.footer`
 ` 
 export const FooterInfoContainer = styled.div`
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-evenly;
     align-items: center;
     color: white;
+    margin-top: 40px;
 `
 
 
