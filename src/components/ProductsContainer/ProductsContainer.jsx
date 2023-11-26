@@ -1,8 +1,12 @@
+// React
 import React from 'react'
 
-const ProductsContainer = () => {
+// Styles
+import * as Styled from './style'
+
+const ProductsContainer = ({title}) => {
   return (
-    <div>ProductsContainer</div>
+    <Styled.MainContainer><Styled.TitleWrapper><Styled.Title>{title}</Styled.Title></Styled.TitleWrapper></Styled.MainContainer>
   )
 }
 
