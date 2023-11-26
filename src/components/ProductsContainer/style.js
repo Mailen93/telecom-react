@@ -24,3 +24,12 @@ export const Title = styled.h2`
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 `
+export const ProductsContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+`
