@@ -29,6 +29,7 @@ export const FooterEnd = styled.p`
 
 export const Developer = styled.span`
     font-weight: 600;
+    margin-left: 10px;
 `
 
 export const IconsWrapper = styled.div`
