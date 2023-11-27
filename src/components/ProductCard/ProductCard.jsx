@@ -14,10 +14,11 @@ import CartContext from "../../contexts/CartContext";
 const ProductCard = ({product}) => {
   const {addToCartContext} = useContext(CartContext)
 
-  const handleBuy = useCallback((product) => {
-    console.log(product)
-    addToCartContext(product)
-  }, [])
+
+  const handleBuy = (game) => {
+    console.log("🚀 ~ file: ProductCard.jsx:24 ~ handleBuy ~ game:", game)
+    addToCartContext(game)
+  } 
 
   return (
     <Styled.CardBody>

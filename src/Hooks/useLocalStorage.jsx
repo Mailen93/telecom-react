@@ -1,26 +1,26 @@
 import { useState } from "react";
 
 export const useLocaleStorage = (key, initialValue = []) => {
-  const getSavedValue = () => {
+  const getStoragedValue = () => {
     try {
-      const savedValue = window.localStorage.getItem(key);
-      return savedValue ? JSON.parse(savedValue) : initialValue;
+      const localStoragedValue = window.localStorage.getItem(key);
+      return localStoragedValue ? JSON.parse(localStoragedValue) : initialValue;
     } catch (error) {
-      console.error(`Error al obtener ${key} del LocalStorage: ${error}`);
+      console.error(`Error with the ${key} in LS: ${error}`);
       return initialValue;
     }
   };
-  const [savedValue, setSavedValue] = useState(getSavedValue());
+  const [storagedValue, setStoragedValue] = useState(getStoragedValue());
 
-  const saveValue = (newValue) => {
+  const saveValueLocalStorage = (newValue) => {
     try {
-      const newSavedValue = [...savedValue, newValue];
-      setSavedValue(newSavedValue);
-      window.localStorage.setItem(key, JSON.stringify(newSavedValue));
+      const newStoragedValue = [...storagedValue, newValue];
+      setStoragedValue(newStoragedValue);
+      window.localStorage.setItem(key, JSON.stringify(newStoragedValue));
     } catch (error) {
-      console.error(`Error al guardar ${key} en LocalStorage: ${error}`);
+      console.error(`Error saving ${key} in LS: ${error}`);
     }
-
-    return [saveValue, savedValue];
   };
+
+  return [saveValueLocalStorage, storagedValue];
 };
