@@ -56,7 +56,7 @@ const CartProvider = ({ children }) => {
     });
   };
 
-  const data = { addToCartContext, deleteProductCartContext, cart, deleteProductCartContext, deleteProductByQuantity };
+  const data = { addToCartContext, deleteProductCartContext, cart, deleteProductByQuantity };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };
 

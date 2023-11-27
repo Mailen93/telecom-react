@@ -36,3 +36,13 @@ export const ArticlesWrapper = styled.div`
     max-height: 420px;
 `
 
+export const NoArticlesAvailable = styled.p`
+    font-size: 45px;
+    color: ${theme.colors.primaryOrange};
+    text-align: center;
+    width: 80%;
+    margin: auto;
+`
+
+export const Summary = styled.div``
+
