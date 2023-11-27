@@ -1,27 +1,23 @@
-import { User, Fav, Cart, Facebook, LinkedIn, Twitter, GooglePlus, Youtube } from "../assets//icons";
 import {
-  ConEsoNo,
-  Decisiones,
-  ElMelomano,
-  EnPalabras,
-  Ilusrado,
-  NiEnPedo,
-  Refumany,
-  Teg,
-  Tekbio,
-} from "../assets/ProductsImages";
+  User,
+  Fav,
+  Facebook,
+  LinkedIn,
+  Twitter,
+  Youtube,
+} from "../assets//icons";
 
 export const navigationitems = [
   { id: "inicio", label: "Inicio", route: "/home" },
   { id: "nosotros", label: "Nosotros", route: "/nosotros" },
   { id: "productos", label: "Productos", route: "/productos" },
   { id: "contacto", label: "Contacto", route: "/contacto" },
+  { id: "alta", label: "Alta", route: "/alta" },
 ];
 
 export const navIcons = [
   { id: "usuario", icon: User },
   { id: "favs", icon: Fav },
-  { id: "cart", icon: Cart },
 ];
 
 export const buttons = [
@@ -59,15 +55,23 @@ export const footerContent = [
 
 export const footerIcons = [
   {
-    id: 'facebook', icon: Facebook, link: 'https://www.facebook.com/?locale=es_LA'
+    id: "facebook",
+    icon: Facebook,
+    link: "https://www.facebook.com/?locale=es_LA",
   },
   {
-    id: 'linkedIn', icon: LinkedIn, link: 'https://www.linkedin.com/in/mlabarrere/'
+    id: "linkedIn",
+    icon: LinkedIn,
+    link: "https://www.linkedin.com/in/mlabarrere/",
   },
   {
-    id: 'twitter', icon: Twitter, link: 'https://twitter.com/?lang=es'
+    id: "twitter",
+    icon: Twitter,
+    link: "https://twitter.com/?lang=es",
   },
   {
-    id: 'youtube', icon: Youtube, link: 'https://www.youtube.com/?app=desktop&gl=AR&hl=es'
+    id: "youtube",
+    icon: Youtube,
+    link: "https://www.youtube.com/?app=desktop&gl=AR&hl=es",
   },
-]
+];

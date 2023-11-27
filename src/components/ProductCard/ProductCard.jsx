@@ -13,7 +13,7 @@ import { UserGreen } from "../../assets/icons";
 const ProductCard = ({product}) => {
 
   const handleBuy = useCallback((product) => {
-    console.log(product)
+    console.log(product.price)
   }, [])
 
   return (

@@ -48,6 +48,7 @@ export const RightNavContainer = styled.nav`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  margin-right: 40px;
 `;
 
 export const NavIcon = styled.img`
