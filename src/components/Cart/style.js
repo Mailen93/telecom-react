@@ -22,10 +22,12 @@ export const CartBody = styled.div`
   border-radius: 8px;
   padding: 10px;
   display: flex;
-  justify-content: center;
   -webkit-box-shadow: 21px 20px 64px 2px rgba(0, 0, 0, 0.78);
   -moz-box-shadow: 21px 20px 64px 2px rgba(0, 0, 0, 0.78);
   box-shadow: 21px 20px 64px 2px rgba(0, 0, 0, 0.78);
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 `;
 export const CartTitle = styled.h3`
   font-size: 32px;
@@ -49,3 +51,32 @@ export const CloseIcon = styled.img`
   width: 20px;
   height: 20px;
 `;
+
+export const ItemsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  overflow-y: scroll;
+  padding-right: 6px;
+  &::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: ${theme.colors.primaryRed};
+    border-radius: 8px;
+  }
+`
+
+export const EmptyCart = styled.p`
+  padding: 10px;
+  background-color: ${theme.colors.primaryRed};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 25% 0;
+`

@@ -10,17 +10,8 @@ export const useLocaleStorage = (key, initialValue = []) => {
       return initialValue;
     }
   };
+
   const [storagedValue, setStoragedValue] = useState(getStoragedValue());
 
-  const saveValueLocalStorage = (newValue) => {
-    try {
-      const newStoragedValue = [...storagedValue, newValue];
-      setStoragedValue(newStoragedValue);
-      window.localStorage.setItem(key, JSON.stringify(newStoragedValue));
-    } catch (error) {
-      console.error(`Error saving ${key} in LS: ${error}`);
-    }
-  };
-
-  return [saveValueLocalStorage, storagedValue];
+  return [ storagedValue, setStoragedValue];
 };
