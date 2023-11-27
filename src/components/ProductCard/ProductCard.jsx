@@ -1,5 +1,5 @@
 // React
-import React, { useCallback } from "react";
+import React, { useCallback, useContext } from "react";
 
 // Styles
 import * as Styled from "./style";
@@ -9,11 +9,14 @@ import { buttons } from "../../utils/constants";
 
 // Assets
 import { UserGreen } from "../../assets/icons";
+import CartContext from "../../contexts/CartContext";
 
 const ProductCard = ({product}) => {
+  const {addToCartContext} = useContext(CartContext)
 
   const handleBuy = useCallback((product) => {
-    console.log(product.price)
+    console.log(product)
+    addToCartContext(product)
   }, [])
 
   return (
