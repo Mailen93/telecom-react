@@ -33,14 +33,18 @@ const CartProvider = ({ children }) => {
   };
 
   const deleteProductCartContext = (id) => {
-    // Implementa la lógica de eliminación según sea necesario
+    setCart((prevCart) => {
+      const updatedCart = prevCart.filter((item) => item.id !== id);
+      window.localStorage.setItem('cart', JSON.stringify(updatedCart));
+      return updatedCart;
+    });
   };
 
   const saveCartContext = () => {
-    // Implementa la lógica de guardar según sea necesario
+
   };
 
-  const data = { addToCartContext, deleteProductCartContext, saveCartContext, cart };
+  const data = { addToCartContext, deleteProductCartContext, saveCartContext, cart, deleteProductCartContext };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };
 

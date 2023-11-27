@@ -66,7 +66,7 @@ export const ItemsWrapper = styled.div`
     background-color: ${theme.colors.primaryRed};
     border-radius: 8px;
   }
-`
+`;
 
 export const EmptyCart = styled.p`
   padding: 10px;
@@ -79,20 +79,31 @@ export const EmptyCart = styled.p`
   text-transform: uppercase;
   font-weight: 600;
   margin: 25% 0;
-`
+`;
 
 export const Total = styled.p`
-    width: 100%;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: ${theme.colors.primaryRed};
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-`
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: ${theme.colors.primaryRed};
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+`;
 export const TotalNumber = styled.span`
   font-weight: 800;
+`;
 
-`
-
+export const CheckOutButton = styled.a`
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  background-color: ${theme.colors.primaryOrange};
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  cursor: pointer;
+`;

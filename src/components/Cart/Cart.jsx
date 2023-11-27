@@ -46,9 +46,17 @@ const Cart = () => {
           ) : (
             <Styled.EmptyCart>{`No games added :(`}</Styled.EmptyCart>
           )}
-          <Styled.Total>
-            Total:<Styled.TotalNumber>AR$ {renderTotal()}</Styled.TotalNumber> 
-          </Styled.Total>
+          {!!cart.length && (
+            <>
+            <Styled.Total>
+              Total:<Styled.TotalNumber>AR$ {renderTotal()}</Styled.TotalNumber>
+            </Styled.Total>
+            <Styled.CheckOutButton href="/checkout">
+              Check Out
+            </Styled.CheckOutButton>
+            </>
+            
+          )}
         </Styled.CartBody>
       ) : (
         <Styled.CartIconWrapper onClick={() => setCartModal(!cartModal)}>

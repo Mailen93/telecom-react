@@ -11,6 +11,7 @@ export const ItemBody = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 `
 
 export const ItemName = styled.h3`
@@ -28,3 +29,22 @@ export const ItemPrice = styled.p``
 export const ItemQuantity = styled.p``
 
 export const ItemSubTotal = styled.p``
+
+export const DeleteProduct = styled.button`
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    background-color: ${theme.colors.primaryRed};
+    cursor: pointer;
+`
+
+export const DeleteProductIcon = styled.img`
+    width: 12px;
+    height: 12px;
+`

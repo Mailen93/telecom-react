@@ -5,7 +5,7 @@ import {
   LinkedIn,
   Twitter,
   Youtube,
-} from "../assets//icons";
+} from "../assets/icons";
 
 export const navigationitems = [
   { id: "inicio", label: "Inicio", route: "/" },
