@@ -17,9 +17,14 @@ const Cart = () => {
   const [cartModal, setCartModal] = useState(false);
   const { cart } = useContext(CartContext);
 
-  useEffect(() => {
-    console.log("SOY EL CART", cart);
-  }, [cart]);
+  const renderTotal = () => {
+    const total = cart.reduce(
+      (acc, item) => acc + item.price * item.quantity,
+      0
+    );
+    return total;
+  };
+  console.log(renderTotal());
 
   return (
     <>
@@ -41,6 +46,9 @@ const Cart = () => {
           ) : (
             <Styled.EmptyCart>{`No games added :(`}</Styled.EmptyCart>
           )}
+          <Styled.Total>
+            Total:<Styled.TotalNumber>AR$ {renderTotal()}</Styled.TotalNumber> 
+          </Styled.Total>
         </Styled.CartBody>
       ) : (
         <Styled.CartIconWrapper onClick={() => setCartModal(!cartModal)}>

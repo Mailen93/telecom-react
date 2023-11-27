@@ -16,6 +16,7 @@ export const ItemBody = styled.div`
 export const ItemName = styled.h3`
     font-weight: 400;
     font-size: 16px;
+    font-weight: 700;
     
 `
 export const ItemDetailWrapper = styled.div`

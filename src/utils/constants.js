@@ -22,7 +22,6 @@ export const navIcons = [
 
 export const buttons = [
   { id: "comprar", label: "Comprar" },
-  { id: "verMas", label: "Ver Más" },
 ];
 
 export const footerContent = [
