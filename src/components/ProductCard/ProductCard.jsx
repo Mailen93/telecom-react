@@ -9,23 +9,26 @@ import { buttons } from "../../utils/constants";
 
 // Assets
 import { UserGreen } from "../../assets/icons";
+
+// Contexts
 import CartContext from "../../contexts/CartContext";
 
-const ProductCard = ({product}) => {
-  const {addToCartContext} = useContext(CartContext)
+const ProductCard = ({ product }) => {
+  const { addToCartContext } = useContext(CartContext);
 
-
-  const handleBuy = (game) => {
-    console.log("🚀 ~ file: ProductCard.jsx:24 ~ handleBuy ~ game:", game)
-    addToCartContext(game)
-  } 
+  const handleBuy = (product) => {
+    console.log(
+      "🚀 ~ file: ProductCard.jsx:19 ~ handleBuy ~ product:",
+      product
+    );
+    addToCartContext(product);
+  };
 
   return (
     <Styled.CardBody>
       <Styled.CardImageWrapper>
         <Styled.CardImage src={product.image} alt={product.image} />
       </Styled.CardImageWrapper>
-
       <Styled.CardTitle>{product.name}</Styled.CardTitle>
       <Styled.Divider />
       <Styled.CardDetailWrapper>
@@ -40,7 +43,17 @@ const ProductCard = ({product}) => {
         <Styled.Price>AR$ {product.price}</Styled.Price>
         <Styled.ButtonsWrapper>
           {buttons.map((button) => (
-            <Styled.Button $type={button.id} key={button.id} onClick={button.id === 'comprar' ? () => {handleBuy(product)} : null}>
+            <Styled.Button
+              $type={button.id}
+              key={button.id}
+              onClick={
+                button.id === "comprar"
+                  ? () => {
+                      handleBuy(product);
+                    }
+                  : null
+              }
+            >
               {button.label}
             </Styled.Button>
           ))}

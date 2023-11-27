@@ -25,7 +25,6 @@ const CartProvider = ({ children }) => {
       addToCart(game)
     } else {
       const productFromCart = getCartProduct(game)
-      console.log('Game en carrito', productFromCart)
       productFromCart.quantity++
       window.localStorage.setItem('cart', JSON.stringify(cart))
     }
