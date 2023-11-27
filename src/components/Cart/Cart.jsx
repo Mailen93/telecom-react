@@ -1,5 +1,5 @@
 // React
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 
 // Styles
 import * as Styled from "./style";
@@ -48,14 +48,14 @@ const Cart = () => {
           )}
           {!!cart.length && (
             <>
-            <Styled.Total>
-              Total:<Styled.TotalNumber>AR$ {renderTotal()}</Styled.TotalNumber>
-            </Styled.Total>
-            <Styled.CheckOutButton href="/checkout">
-              Check Out
-            </Styled.CheckOutButton>
+              <Styled.Total>
+                Total:
+                <Styled.TotalNumber>AR$ {renderTotal()}</Styled.TotalNumber>
+              </Styled.Total>
+              <Styled.CheckOutButton href="/checkout">
+                Check Out
+              </Styled.CheckOutButton>
             </>
-            
           )}
         </Styled.CartBody>
       ) : (

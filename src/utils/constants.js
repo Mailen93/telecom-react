@@ -74,3 +74,8 @@ export const footerIcons = [
     link: "https://www.youtube.com/?app=desktop&gl=AR&hl=es",
   },
 ];
+
+export const addRemoveButtons = [
+  {id: 'add', label: '+'},
+  {id: 'remove', label: '-'}
+]
