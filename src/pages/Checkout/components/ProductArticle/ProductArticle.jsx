@@ -7,11 +7,14 @@ import { addRemoveButtons } from "../../../../utils/constants";
 import CartContext from "../../../../contexts/CartContext";
 
 const ProductArticle = ({ article }) => {
-  const { addToCartContext, deleteProductCartContext } =
+  const { addToCartContext, deleteProductCartContext, deleteProductByQuantity } =
     useContext(CartContext);
   const handleAddArticle = (article) => {
     addToCartContext(article);
   };
+  const handleRemoveByOneArticle = (articleId) => {
+    deleteProductByQuantity(articleId)
+  }
   return (
     <Styled.ArticleBody>
       <Styled.ArticleInfoContainer>
@@ -35,7 +38,7 @@ const ProductArticle = ({ article }) => {
                   ? () => {
                       handleAddArticle(article);
                     }
-                  : null
+                  : () => {handleRemoveByOneArticle(article.id)}
               }
               key={button.id}
             >
