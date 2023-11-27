@@ -9,9 +9,9 @@ const CartItem = ({ game }) => {
     <Styled.ItemBody>
       <Styled.ItemName>{game.name}</Styled.ItemName>
       <Styled.ItemDetailWrapper>
-        <Styled.ItemPrice>AR$ {game.price}  x</Styled.ItemPrice>
-        <Styled.ItemQuantity>{game.quantity} =</Styled.ItemQuantity>
-        <Styled.ItemSubTotal>AR$ {game.price * game.quantity}</Styled.ItemSubTotal>
+        <Styled.ItemPrice>AR$ {game.price}</Styled.ItemPrice>
+        <Styled.ItemQuantity>x {game.quantity}</Styled.ItemQuantity>
+        <Styled.ItemSubTotal>= AR$ {game.price * game.quantity}</Styled.ItemSubTotal>
       </Styled.ItemDetailWrapper>
     </Styled.ItemBody>
   );

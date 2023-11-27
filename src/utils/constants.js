@@ -8,7 +8,7 @@ import {
 } from "../assets//icons";
 
 export const navigationitems = [
-  { id: "inicio", label: "Inicio", route: "/home" },
+  { id: "inicio", label: "Inicio", route: "/" },
   { id: "nosotros", label: "Nosotros", route: "/nosotros" },
   { id: "productos", label: "Productos", route: "/productos" },
   { id: "contacto", label: "Contacto", route: "/contacto" },
