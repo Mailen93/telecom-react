@@ -23,20 +23,18 @@ const Summary = ({ cart }) => {
         return (
           <Styled.SummaryItemTotal>
             AR${" "}
-            {cart.reduce(
-              (acc, item) => acc + item.quantity * item.price * 0.21,
-              0,
-            ).toFixed(2)}
+            {cart
+              .reduce((acc, item) => acc + item.quantity * item.price * 0.21, 0)
+              .toFixed(2)}
           </Styled.SummaryItemTotal>
         );
       default:
         return (
           <Styled.SummaryItemTotal>
             AR${" "}
-            {cart.reduce(
-              (acc, item) => acc + item.quantity * item.price * 1.21,
-              0,
-            ).toFixed(2)}
+            {cart
+              .reduce((acc, item) => acc + item.quantity * item.price * 1.21, 0)
+              .toFixed(2)}
           </Styled.SummaryItemTotal>
         );
     }

@@ -84,3 +84,11 @@ export const summaryItems = [
   { id: "taxes", label: "IVA" },
   { id: "totalWithTaxes", label: "Total + IVA" },
 ];
+
+export const uploadInputs = [
+  { id: "name", label: "Game Name" },
+  { id: "description", label: "Game Description" },
+  { id: "price", label: "Game Price" },
+  { id: "players", label: "Game Players" },
+  { id: "age", label: "Players Age" },
+];
