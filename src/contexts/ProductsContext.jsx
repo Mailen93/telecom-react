@@ -2,7 +2,7 @@
 import { createContext, useEffect, useState } from "react";
 
 // Utils
-import { get, post } from "../utils/http";
+import { deleteItem, get, post } from "../utils/http";
 
 // Creando Contexto
 // Primer paso - Creación del Contexto
@@ -37,7 +37,19 @@ const ProductsProvider = ({ children }) => {
     }
   };
 
-  const data = { products, createProduct };
+  // ! DELETE PRODUCT -- Borrar un producto de la base de datos -- D
+  const deleteProduct = async (productId) => {
+    try {
+      await deleteItem(`${url}/${productId}`);
+      setProducts((prevProducts) => {
+        return prevProducts.filter((product) => product.id !== productId);
+      });
+    } catch (error) {
+      console.log("DeleteItem function - Not working", error);
+    }
+  };
+
+  const data = { products, createProduct, deleteProduct };
   return (
     <ProductsContext.Provider value={data}>{children}</ProductsContext.Provider>
   );

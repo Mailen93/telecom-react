@@ -39,3 +39,25 @@ export const post = async (url, data) => {
 // ! CRUD -> U:UPDATE => PUT
 
 // ! CRUD -> D:DELETE => DELETE
+export const deleteItem = async (url) => {
+  try {
+    const response = await fetch(url, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `Something happened ${response.status} ${response.statusText}`
+      );
+    }
+
+    const responseData = await response.json();
+    return responseData;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};

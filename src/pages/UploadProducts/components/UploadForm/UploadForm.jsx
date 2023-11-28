@@ -15,7 +15,7 @@ import { v4 as uuidv4 } from "uuid";
 import ProductsContext from "../../../../contexts/ProductsContext";
 
 const UploadForm = () => {
-  const { createProduct, products } = useContext(ProductsContext);
+  const { createProduct } = useContext(ProductsContext);
   const [form, setForm] = useState({ id: uuidv4(), image: NewGame });
 
   const handleSubmit = async (event) => {
@@ -32,10 +32,6 @@ const UploadForm = () => {
     };
     setForm(newItem);
   };
-
-  useEffect(() => {
-    setForm({ id: uuidv4(), image: NewGame });
-  }, [products]);
 
   return (
     <Styled.FormBody>
