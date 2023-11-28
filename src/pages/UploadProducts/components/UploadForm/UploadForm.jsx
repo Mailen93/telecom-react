@@ -17,9 +17,22 @@ import ProductsContext from "../../../../contexts/ProductsContext";
 const UploadForm = ({ selectedProduct, setSelectedProduct }) => {
   const { createProduct, updateProduct } = useContext(ProductsContext);
   const [form, setForm] = useState({ id: uuidv4(), image: NewGame });
+  const [formIsValid, setFormIsValid] = useState(false);
+
+  const validateForm = () => {
+    const isValid = uploadInputs.every((input) => {
+      const inputValue = form[input.id];
+      return inputValue !== undefined && inputValue !== "";
+    });
+    setFormIsValid(isValid);
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (!formIsValid) {
+      alert("All fields are required!!");
+      return;
+    }
     if (selectedProduct) {
       await updateProduct(form.id, form);
       setSelectedProduct(null);
@@ -28,10 +41,11 @@ const UploadForm = ({ selectedProduct, setSelectedProduct }) => {
     }
 
     setForm({ id: uuidv4(), image: NewGame });
+    setFormIsValid(false);
   };
 
   const handleChange = (event) => {
-    console.log(event.target.name);
+    validateForm();
     const newItem = {
       ...form,
       [event.target.name]: event.target.value,

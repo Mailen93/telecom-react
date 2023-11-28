@@ -61,24 +61,17 @@
       "description": "Poné a prueba tu inteligencia y táctica en la batalla por conquistar el mundo. ¡Cumplí las misiones y derribá a tus oponentes!"
     },
     {
-      "id": 7,
-      "name": "TK-bió",
-      "image": "./src/assets/ProductsImages/t-kabio.jpg",
-      "price": 3200,
-      "players": "3 - 10",
-      "age": "18",
-      "units": 0,
-      "description": "Un juego para disfrutar de lo más hermoso que tiene la amistad: LA MALDAD. Consignas llenas de venganza, sufrimiento y cringe..."
+      "id": "1e4ade85-8fe8-4efc-ae9b-9d933cd0ef59",
+      "image": "/src/assets/ProductsImages/NewGame.png"
     },
     {
-      "id": 8,
-      "name": "El ilustrado",
-      "image": "./src/assets/ProductsImages/ilustrado.jpg",
-      "price": 15850,
-      "players": "2 - 9",
-      "age": "15",
-      "units": 0,
-      "description": " Poné a prueba tus conocimientos en distintas áreas mientras compartís momentos inolvidables con tus seres queridos."
+      "id": "08c1b400-4cfe-4ef8-9c74-33ccfa3465e8",
+      "image": "/src/assets/ProductsImages/NewGame.png",
+      "name": "a",
+      "price": "1",
+      "players": "a",
+      "age": "as",
+      "description": "as"
     }
   ],
   "cart": []
