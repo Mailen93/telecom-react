@@ -41,22 +41,12 @@
       "description": "Colocá el mazo en la mesa, saca una carta y ¡que comience el juego! Si no hacés lo que dice, como castigo, tomás unos tragos!!!"
     },
     {
-      "id": 4,
-      "name": "Con eso no se jode",
-      "image": "./src/assets/ProductsImages/con-eso-no.jpg",
-      "price": 5400,
-      "players": "3 - 10",
-      "age": "18",
-      "units": 0,
-      "description": "Poné a prueba tu capacidad para improvisar respuestas graciosas en este juego de cartas de humor negro."
-    },
-    {
       "id": 5,
-      "name": "Refumanyi",
+      "name": "Refumanyi 1",
       "image": "./src/assets/ProductsImages/fumany.jpg",
-      "price": 6200,
-      "players": "2 - 4",
-      "age": "18",
+      "price": "6500",
+      "players": "2 - 6",
+      "age": "18+",
       "units": 0,
       "description": "Cada carta tiene una consigna para que fume uno, todos o nadie.¡Gana el que después de varias rondas fuma la última pitada!"
     },
@@ -89,15 +79,6 @@
       "age": "15",
       "units": 0,
       "description": " Poné a prueba tus conocimientos en distintas áreas mientras compartís momentos inolvidables con tus seres queridos."
-    },
-    {
-      "id": "068b1c22-8744-4ee9-8ee6-c9a1f1f39501",
-      "image": "/src/assets/ProductsImages/NewGame.png",
-      "name": "Lorenzo Lamas",
-      "price": "2",
-      "players": "2 a 3",
-      "age": "10",
-      "description": "Lo que es este game ! "
     }
   ],
   "cart": []

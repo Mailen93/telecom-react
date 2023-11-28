@@ -8,6 +8,7 @@ import Refumany from "./fumany.jpg";
 import Tekbio from "./t-kabio.jpg";
 import Ilusrado from "./ilustrado.jpg";
 import NewGame from "./NewGame.png";
+import UsHero from "./NosotrosHero.png";
 
 export {
   Teg,
@@ -20,4 +21,5 @@ export {
   Tekbio,
   Ilusrado,
   NewGame,
+  UsHero,
 };
