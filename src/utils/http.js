@@ -37,6 +37,29 @@ export const post = async (url, data) => {
 };
 
 // ! CRUD -> U:UPDATE => PUT
+export const put = async (url, data) => {
+  try {
+    const response = await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `Something happened ${response.status} ${response.statusText}`
+      );
+    }
+
+    const responseData = await response.json();
+    return responseData;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};
 
 // ! CRUD -> D:DELETE => DELETE
 export const deleteItem = async (url) => {

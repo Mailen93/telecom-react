@@ -6,13 +6,16 @@ import * as Styled from "./style";
 import { prodcuctsListButtons } from "../../../../utils/constants";
 import ProductsContext from "../../../../contexts/ProductsContext";
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, setSelectedProduct }) => {
   const productKeys = Object.keys(product).filter(
     (key) => key !== "image" && key !== "id"
   );
   const { deleteProduct } = useContext(ProductsContext);
   const handleDeleteProduct = (id) => {
     deleteProduct(id);
+  };
+  const handleUpdateProduct = () => {
+    setSelectedProduct(product);
   };
 
   return (
@@ -34,7 +37,7 @@ const ProductItem = ({ product }) => {
             onClick={
               button.id === "delete"
                 ? () => handleDeleteProduct(product.id)
-                : null
+                : handleUpdateProduct
             }
           >
             {button.label}

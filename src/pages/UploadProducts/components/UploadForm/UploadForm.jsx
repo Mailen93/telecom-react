@@ -14,13 +14,19 @@ import { v4 as uuidv4 } from "uuid";
 // Contexts
 import ProductsContext from "../../../../contexts/ProductsContext";
 
-const UploadForm = () => {
-  const { createProduct } = useContext(ProductsContext);
+const UploadForm = ({ selectedProduct, setSelectedProduct }) => {
+  const { createProduct, updateProduct } = useContext(ProductsContext);
   const [form, setForm] = useState({ id: uuidv4(), image: NewGame });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await createProduct(form);
+    if (selectedProduct) {
+      await updateProduct(form.id, form);
+      setSelectedProduct(null);
+    } else {
+      await createProduct(form);
+    }
+
     setForm({ id: uuidv4(), image: NewGame });
   };
 
@@ -32,6 +38,14 @@ const UploadForm = () => {
     };
     setForm(newItem);
   };
+
+  useEffect(() => {
+    if (selectedProduct) {
+      setForm(selectedProduct);
+    } else {
+      setForm({ id: uuidv4(), image: NewGame });
+    }
+  }, [selectedProduct]);
 
   return (
     <Styled.FormBody>

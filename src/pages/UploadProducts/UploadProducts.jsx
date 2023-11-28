@@ -1,5 +1,5 @@
 // React
-import React from "react";
+import React, { useState } from "react";
 
 // Styles
 import * as Styled from "./style";
@@ -9,10 +9,16 @@ import UploadForm from "./components/UploadForm";
 import ProductsList from "./components/ProductsList/ProductsList";
 
 const UploadProducts = () => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  console.log(selectedProduct);
   return (
     <Styled.UploadSection>
-      <UploadForm />
-      <ProductsList />
+      <UploadForm
+        selectedProduct={selectedProduct}
+        setSelectedProduct={setSelectedProduct}
+      />
+      <ProductsList setSelectedProduct={setSelectedProduct} />
     </Styled.UploadSection>
   );
 };

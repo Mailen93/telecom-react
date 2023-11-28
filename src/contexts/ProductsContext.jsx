@@ -2,7 +2,7 @@
 import { createContext, useEffect, useState } from "react";
 
 // Utils
-import { deleteItem, get, post } from "../utils/http";
+import { deleteItem, get, post, put } from "../utils/http";
 
 // Creando Contexto
 // Primer paso - Creación del Contexto
@@ -49,7 +49,22 @@ const ProductsProvider = ({ children }) => {
     }
   };
 
-  const data = { products, createProduct, deleteProduct };
+  // ! UPDATE PRODUCT -- Actualizar un producto de la base de datos -- U
+  const updateProduct = async (productId, updatedData) => {
+    try {
+      const updatedProduct = await put(`${url}/${productId}`, updatedData);
+
+      setProducts((prevProducts) =>
+        prevProducts.map((product) =>
+          product.id === productId ? updatedProduct : product
+        )
+      );
+    } catch (error) {
+      console.log("updateProduct function - Not working", error);
+    }
+  };
+
+  const data = { products, createProduct, deleteProduct, updateProduct };
   return (
     <ProductsContext.Provider value={data}>{children}</ProductsContext.Provider>
   );

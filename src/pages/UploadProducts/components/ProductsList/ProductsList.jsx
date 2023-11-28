@@ -8,12 +8,16 @@ import * as Styled from "./style";
 import ProductsContext from "../../../../contexts/ProductsContext";
 import ProductItem from "../ProductItem/ProductItem";
 
-const ProductsList = () => {
+const ProductsList = ({ setSelectedProduct }) => {
   const { products } = useContext(ProductsContext);
   return (
     <Styled.ListBody>
       {products?.map((product, index) => (
-        <ProductItem key={`${product.id}-${index}`} product={product} />
+        <ProductItem
+          key={`${product.id}-${index}`}
+          product={product}
+          setSelectedProduct={setSelectedProduct}
+        />
       ))}
     </Styled.ListBody>
   );
