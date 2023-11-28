@@ -20,7 +20,7 @@ const Cart = () => {
   const renderTotal = () => {
     const total = cart.reduce(
       (acc, item) => acc + item.price * item.quantity,
-      0
+      0,
     );
     return total;
   };

@@ -19,7 +19,7 @@ const renderFooterBlocks = () => {
 const renderIcons = () => {
   return footerIcons.map((icon) => (
     <Styled.SocialMediaLinks key={icon.id} href={icon.link} target="_blank">
-      <Styled.FooterIcon  src={icon.icon} />
+      <Styled.FooterIcon src={icon.icon} />
     </Styled.SocialMediaLinks>
   ));
 };
@@ -35,9 +35,7 @@ const Footer = () => {
         2023 - Todos los derechos reservados
         <Styled.Developer>Mailen Alvarez</Styled.Developer>
       </Styled.FooterEnd>
-      <Styled.IconsWrapper>
-        {renderIcons()}
-      </Styled.IconsWrapper>
+      <Styled.IconsWrapper>{renderIcons()}</Styled.IconsWrapper>
     </Styled.FooterBody>
   );
 };

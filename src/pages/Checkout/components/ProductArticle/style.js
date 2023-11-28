@@ -35,8 +35,8 @@ export const ArticlePrice = styled.p`
 `;
 
 export const ArticleQuantityWrapper = styled.div`
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 `;
 
 export const AddAndDeleteButton = styled.button``;

@@ -7,7 +7,7 @@ import Youtube from "../icons/Youtube.svg";
 import LinkedIn from "../icons/LinkedIn.svg";
 import GooglePlus from "../icons/GooglePlus.svg";
 import Close from "../icons/Close.svg";
-import CartIcon from '../icons/CartIcon.svg'
+import CartIcon from "../icons/CartIcon.svg";
 
 export {
   User,
@@ -19,5 +19,5 @@ export {
   Youtube,
   LinkedIn,
   GooglePlus,
-  Close
+  Close,
 };

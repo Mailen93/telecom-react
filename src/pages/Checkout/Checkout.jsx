@@ -20,7 +20,6 @@ const Checkout = () => {
     return totalQuantity;
   }, 0);
 
-
   useEffect(() => {
     if (!cart.length) {
       setTimeout(() => {

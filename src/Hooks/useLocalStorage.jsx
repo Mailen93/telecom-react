@@ -13,5 +13,5 @@ export const useLocaleStorage = (key, initialValue = []) => {
 
   const [storagedValue, setStoragedValue] = useState(getStoragedValue());
 
-  return [ storagedValue, setStoragedValue];
+  return [storagedValue, setStoragedValue];
 };

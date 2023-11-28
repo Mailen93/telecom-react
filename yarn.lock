@@ -6489,6 +6489,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "prettier@npm:3.1.0"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 44b556bd56f74d7410974fbb2418bb4e53a894d3e7b42f6f87779f69f27a6c272fa7fc27cec0118cd11730ef3246478052e002cbd87e9a253f9cd04a56aa7d9b
+  languageName: node
+  linkType: hard
+
 "private@npm:^0.1.6, private@npm:^0.1.8":
   version: 0.1.8
   resolution: "private@npm:0.1.8"
@@ -7747,6 +7756,7 @@ __metadata:
     eslint-plugin-react-refresh: ^0.4.4
     jason-server: ^3.0.0
     json-server: ^0.17.4
+    prettier: ^3.1.0
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router: ^6.20.0

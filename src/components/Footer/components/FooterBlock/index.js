@@ -1,1 +1,1 @@
-export { default } from './FooterBlock'
+export { default } from "./FooterBlock";

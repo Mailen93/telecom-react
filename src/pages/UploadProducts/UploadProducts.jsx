@@ -1,10 +1,8 @@
 // React
-import React from 'react'
+import React from "react";
 
 const UploadProducts = () => {
-  return (
-    <div>UploadProducts</div>
-  )
-}
+  return <div>UploadProducts</div>;
+};
 
-export default UploadProducts
+export default UploadProducts;

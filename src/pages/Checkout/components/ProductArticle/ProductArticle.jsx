@@ -7,14 +7,17 @@ import { addRemoveButtons } from "../../../../utils/constants";
 import CartContext from "../../../../contexts/CartContext";
 
 const ProductArticle = ({ article }) => {
-  const { addToCartContext, deleteProductCartContext, deleteProductByQuantity } =
-    useContext(CartContext);
+  const {
+    addToCartContext,
+    deleteProductCartContext,
+    deleteProductByQuantity,
+  } = useContext(CartContext);
   const handleAddArticle = (article) => {
     addToCartContext(article);
   };
   const handleRemoveByOneArticle = (articleId) => {
-    deleteProductByQuantity(articleId)
-  }
+    deleteProductByQuantity(articleId);
+  };
   return (
     <Styled.ArticleBody>
       <Styled.ArticleInfoContainer>
@@ -26,7 +29,11 @@ const ProductArticle = ({ article }) => {
         </Styled.ArticleDetailWrapper>
       </Styled.ArticleInfoContainer>
       <Styled.ActionButtonsContainer>
-        <Styled.DeleteArticle onClick={() => {deleteProductCartContext(article.id)}}>
+        <Styled.DeleteArticle
+          onClick={() => {
+            deleteProductCartContext(article.id);
+          }}
+        >
           Eliminar
         </Styled.DeleteArticle>
         <Styled.ArticleQuantityWrapper>
@@ -38,7 +45,9 @@ const ProductArticle = ({ article }) => {
                   ? () => {
                       handleAddArticle(article);
                     }
-                  : () => {handleRemoveByOneArticle(article.id)}
+                  : () => {
+                      handleRemoveByOneArticle(article.id);
+                    }
               }
               key={button.id}
             >

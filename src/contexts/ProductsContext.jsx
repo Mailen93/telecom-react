@@ -12,13 +12,12 @@ const ProductsContext = createContext();
 const url = import.meta.env.VITE_ENDPOINT_PRODUCTS;
 
 const ProductsProvider = ({ children }) => {
-
   const [products, setProducts] = useState(null);
   useEffect(() => {
-    getProducts()
-  }, [])
+    getProducts();
+  }, []);
 
-  // ! GET ALL -- Obtener todos los productos 
+  // ! GET ALL -- Obtener todos los productos
   const getProducts = async () => {
     try {
       const products = await get(url);
@@ -28,7 +27,7 @@ const ProductsProvider = ({ children }) => {
     }
   };
 
-  const data = {products};
+  const data = { products };
   return (
     <ProductsContext.Provider value={data}>{children}</ProductsContext.Provider>
   );

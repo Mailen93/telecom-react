@@ -25,7 +25,7 @@ const Summary = ({ cart }) => {
             AR${" "}
             {cart.reduce(
               (acc, item) => acc + item.quantity * item.price * 0.21,
-              0
+              0,
             )}
           </Styled.SummaryItemTotal>
         );
@@ -35,7 +35,7 @@ const Summary = ({ cart }) => {
             AR${" "}
             {cart.reduce(
               (acc, item) => acc + item.quantity * item.price * 1.21,
-              0
+              0,
             )}
           </Styled.SummaryItemTotal>
         );

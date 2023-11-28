@@ -11,7 +11,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import ProductsContext from "../../contexts/ProductsContext";
 
 const ProductsContainer = ({ title }) => {
-  const { products } = useContext(ProductsContext)
+  const { products } = useContext(ProductsContext);
 
   return (
     <Styled.MainContainer>
@@ -20,10 +20,7 @@ const ProductsContainer = ({ title }) => {
       </Styled.TitleWrapper>
       <Styled.ProductsContainer>
         {products?.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-          />
+          <ProductCard key={product.id} product={product} />
         ))}
       </Styled.ProductsContainer>
     </Styled.MainContainer>

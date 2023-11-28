@@ -20,9 +20,7 @@ export const navIcons = [
   { id: "favs", icon: Fav },
 ];
 
-export const buttons = [
-  { id: "comprar", label: "Comprar" },
-];
+export const buttons = [{ id: "comprar", label: "Comprar" }];
 
 export const footerContent = [
   {
@@ -76,13 +74,13 @@ export const footerIcons = [
 ];
 
 export const addRemoveButtons = [
-  {id: 'add', label: '+'},
-  {id: 'remove', label: '-'}
-]
+  { id: "add", label: "+" },
+  { id: "remove", label: "-" },
+];
 
 export const summaryItems = [
-  {id: 'products', label: 'Total Productos'},
-  {id: 'shipping', label: 'Envío'},
-  {id: 'taxes', label: 'IVA'},
-  {id: 'totalWithTaxes', label: 'Total + IVA'},
-]
+  { id: "products", label: "Total Productos" },
+  { id: "shipping", label: "Envío" },
+  { id: "taxes", label: "IVA" },
+  { id: "totalWithTaxes", label: "Total + IVA" },
+];

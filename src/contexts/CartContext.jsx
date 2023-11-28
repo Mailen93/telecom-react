@@ -7,7 +7,7 @@ const CartContext = createContext();
 
 // 2do paso -> Armado del Provider
 const CartProvider = ({ children }) => {
-  const [ cart, setCart] = useLocaleStorage('cart', []);
+  const [cart, setCart] = useLocaleStorage("cart", []);
 
   const gameAlreadyInCart = (game) => {
     return cart.filter((item) => item.id === game.id).length;
@@ -18,15 +18,15 @@ const CartProvider = ({ children }) => {
       game.quantity = 1;
       setCart((prevCart) => {
         const newCart = [...prevCart, game];
-        window.localStorage.setItem('cart', JSON.stringify(newCart));
+        window.localStorage.setItem("cart", JSON.stringify(newCart));
         return newCart;
       });
     } else {
       setCart((prevCart) => {
         const updatedCart = prevCart.map((item) =>
-          item.id === game.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === game.id ? { ...item, quantity: item.quantity + 1 } : item,
         );
-        window.localStorage.setItem('cart', JSON.stringify(updatedCart));
+        window.localStorage.setItem("cart", JSON.stringify(updatedCart));
         return updatedCart;
       });
     }
@@ -35,7 +35,7 @@ const CartProvider = ({ children }) => {
   const deleteProductCartContext = (id) => {
     setCart((prevCart) => {
       const updatedCart = prevCart.filter((item) => item.id !== id);
-      window.localStorage.setItem('cart', JSON.stringify(updatedCart));
+      window.localStorage.setItem("cart", JSON.stringify(updatedCart));
       return updatedCart;
     });
   };
@@ -50,13 +50,18 @@ const CartProvider = ({ children }) => {
       });
 
       const filteredCart = updatedCart.filter((item) => item.quantity > 0);
-      window.localStorage.setItem('cart', JSON.stringify(filteredCart));
+      window.localStorage.setItem("cart", JSON.stringify(filteredCart));
 
       return filteredCart;
     });
   };
 
-  const data = { addToCartContext, deleteProductCartContext, cart, deleteProductByQuantity };
+  const data = {
+    addToCartContext,
+    deleteProductCartContext,
+    cart,
+    deleteProductByQuantity,
+  };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };
 

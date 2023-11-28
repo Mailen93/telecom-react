@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
   const handleBuy = (product) => {
     console.log(
       "🚀 ~ file: ProductCard.jsx:19 ~ handleBuy ~ product:",
-      product
+      product,
     );
     addToCartContext(product);
   };

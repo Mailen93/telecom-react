@@ -37,7 +37,7 @@ export const NavItem = styled.a`
     border-radius: 2px;
     transition: all 0.3s ease-out;
   }
-  
+
   &:hover::after {
     width: 100%;
   }

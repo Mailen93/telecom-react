@@ -5,16 +5,16 @@ import React, { useContext } from "react";
 import * as Styled from "./style";
 
 // Assets
-import {Close} from '../../../../assets/icons'
+import { Close } from "../../../../assets/icons";
 import CartContext from "../../../../contexts/CartContext";
 
 const CartItem = ({ game }) => {
-  const {deleteProductCartContext} = useContext(CartContext)
+  const { deleteProductCartContext } = useContext(CartContext);
 
   const handleDeleteItem = (id) => {
-    console.log('Estoy eliminando este producto!', game);
-    deleteProductCartContext(id)
-  }
+    console.log("Estoy eliminando este producto!", game);
+    deleteProductCartContext(id);
+  };
   return (
     <Styled.ItemBody>
       <Styled.DeleteProduct onClick={() => handleDeleteItem(game.id)}>
