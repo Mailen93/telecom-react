@@ -6489,7 +6489,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.1.0":
+"prettier@npm:3.1.0":
   version: 3.1.0
   resolution: "prettier@npm:3.1.0"
   bin:
@@ -7756,7 +7756,7 @@ __metadata:
     eslint-plugin-react-refresh: ^0.4.4
     jason-server: ^3.0.0
     json-server: ^0.17.4
-    prettier: ^3.1.0
+    prettier: 3.1.0
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router: ^6.20.0
