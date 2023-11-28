@@ -10,7 +10,6 @@ import {
 export const navigationitems = [
   { id: "inicio", label: "Inicio", route: "/" },
   { id: "nosotros", label: "Nosotros", route: "/nosotros" },
-  { id: "contacto", label: "Contacto", route: "/contacto" },
   { id: "alta", label: "Alta", route: "/alta" },
 ];
 
