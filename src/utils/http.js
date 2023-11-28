@@ -4,7 +4,7 @@ export const get = async (url) => {
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(
-        `Something happened ${response.status} ${response.statusText}`,
+        `Something happened ${response.status} ${response.statusText}`
       );
     }
     const data = await response.json();
@@ -15,6 +15,26 @@ export const get = async (url) => {
 };
 
 // ! CRUD -> C:CREATE => POST
+export const post = async (url, data) => {
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) {
+      throw new Error(
+        `Something happened ${response.status} ${response.statusText}`
+      );
+    }
+    const responseData = await response.json();
+    return responseData;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 // ! CRUD -> U:UPDATE => PUT
 

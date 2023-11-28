@@ -37,12 +37,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-refresh", "virtual:d4c7f94ade8a2ac0f09ef97aad835033a00081d2bfee540c099eddf17075a85eda0065bd0e5b4453d5bcb02db1c13fdf99d4995c24d6edbcd71cacd7df6c5f79#npm:0.4.4"],\
             ["jason-server", "npm:3.0.0"],\
             ["json-server", "npm:0.17.4"],\
-            ["prettier", "npm:3.1.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:d4c7f94ade8a2ac0f09ef97aad835033a00081d2bfee540c099eddf17075a85eda0065bd0e5b4453d5bcb02db1c13fdf99d4995c24d6edbcd71cacd7df6c5f79#npm:18.2.0"],\
             ["react-router", "virtual:d4c7f94ade8a2ac0f09ef97aad835033a00081d2bfee540c099eddf17075a85eda0065bd0e5b4453d5bcb02db1c13fdf99d4995c24d6edbcd71cacd7df6c5f79#npm:6.20.0"],\
             ["react-router-dom", "virtual:d4c7f94ade8a2ac0f09ef97aad835033a00081d2bfee540c099eddf17075a85eda0065bd0e5b4453d5bcb02db1c13fdf99d4995c24d6edbcd71cacd7df6c5f79#npm:6.20.0"],\
             ["styled-components", "virtual:d4c7f94ade8a2ac0f09ef97aad835033a00081d2bfee540c099eddf17075a85eda0065bd0e5b4453d5bcb02db1c13fdf99d4995c24d6edbcd71cacd7df6c5f79#npm:6.1.1"],\
+            ["uuid", "npm:9.0.1"],\
             ["vite", "virtual:d4c7f94ade8a2ac0f09ef97aad835033a00081d2bfee540c099eddf17075a85eda0065bd0e5b4453d5bcb02db1c13fdf99d4995c24d6edbcd71cacd7df6c5f79#npm:5.0.2"]\
           ],\
           "linkType": "SOFT"\
@@ -7336,15 +7336,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["prettier", [\
-        ["npm:3.1.0", {\
-          "packageLocation": "./.yarn/unplugged/prettier-npm-3.1.0-708d6027b1/node_modules/prettier/",\
-          "packageDependencies": [\
-            ["prettier", "npm:3.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["private", [\
         ["npm:0.1.8", {\
           "packageLocation": "./.yarn/cache/private-npm-0.1.8-1df19be5d6-a00abd713d.zip/node_modules/private/",\
@@ -8738,12 +8729,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-refresh", "virtual:d4c7f94ade8a2ac0f09ef97aad835033a00081d2bfee540c099eddf17075a85eda0065bd0e5b4453d5bcb02db1c13fdf99d4995c24d6edbcd71cacd7df6c5f79#npm:0.4.4"],\
             ["jason-server", "npm:3.0.0"],\
             ["json-server", "npm:0.17.4"],\
-            ["prettier", "npm:3.1.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:d4c7f94ade8a2ac0f09ef97aad835033a00081d2bfee540c099eddf17075a85eda0065bd0e5b4453d5bcb02db1c13fdf99d4995c24d6edbcd71cacd7df6c5f79#npm:18.2.0"],\
             ["react-router", "virtual:d4c7f94ade8a2ac0f09ef97aad835033a00081d2bfee540c099eddf17075a85eda0065bd0e5b4453d5bcb02db1c13fdf99d4995c24d6edbcd71cacd7df6c5f79#npm:6.20.0"],\
             ["react-router-dom", "virtual:d4c7f94ade8a2ac0f09ef97aad835033a00081d2bfee540c099eddf17075a85eda0065bd0e5b4453d5bcb02db1c13fdf99d4995c24d6edbcd71cacd7df6c5f79#npm:6.20.0"],\
             ["styled-components", "virtual:d4c7f94ade8a2ac0f09ef97aad835033a00081d2bfee540c099eddf17075a85eda0065bd0e5b4453d5bcb02db1c13fdf99d4995c24d6edbcd71cacd7df6c5f79#npm:6.1.1"],\
+            ["uuid", "npm:9.0.1"],\
             ["vite", "virtual:d4c7f94ade8a2ac0f09ef97aad835033a00081d2bfee540c099eddf17075a85eda0065bd0e5b4453d5bcb02db1c13fdf99d4995c24d6edbcd71cacd7df6c5f79#npm:5.0.2"]\
           ],\
           "linkType": "SOFT"\
@@ -9196,6 +9187,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/utils-merge-npm-1.0.1-363bbdfbca-c810954932.zip/node_modules/utils-merge/",\
           "packageDependencies": [\
             ["utils-merge", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["uuid", [\
+        ["npm:9.0.1", {\
+          "packageLocation": "./.yarn/cache/uuid-npm-9.0.1-39a8442bc6-39931f6da7.zip/node_modules/uuid/",\
+          "packageDependencies": [\
+            ["uuid", "npm:9.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\

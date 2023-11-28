@@ -2,7 +2,7 @@
 import { createContext, useEffect, useState } from "react";
 
 // Utils
-import { get } from "../utils/http";
+import { get, post } from "../utils/http";
 
 // Creando Contexto
 // Primer paso - Creación del Contexto
@@ -28,9 +28,16 @@ const ProductsProvider = ({ children }) => {
   };
 
   // ! CREATE PRODUCT -- Crear un nuevo producto -- C
-  const createProduct = async () => {};
+  const createProduct = async (newProduct) => {
+    try {
+      const createdProduct = await post(url, newProduct);
+      setProducts((prevProducts) => [...prevProducts, createdProduct]);
+    } catch (error) {
+      console.log("createProduct function - not working", error);
+    }
+  };
 
-  const data = { products };
+  const data = { products, createProduct };
   return (
     <ProductsContext.Provider value={data}>{children}</ProductsContext.Provider>
   );

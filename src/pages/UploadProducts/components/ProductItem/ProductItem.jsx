@@ -5,9 +5,7 @@ import React from "react";
 import * as Styled from "./style";
 
 const ProductItem = ({ product }) => {
-  const productKeys = Object.keys(product).filter(
-    (key) => key !== "units" && key !== "image"
-  );
+  const productKeys = Object.keys(product).filter((key) => key !== "image");
 
   return (
     <Styled.ProductItemBody>
