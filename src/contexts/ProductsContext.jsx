@@ -17,7 +17,7 @@ const ProductsProvider = ({ children }) => {
     getProducts();
   }, []);
 
-  // ! GET ALL -- Obtener todos los productos
+  // ! GET ALL -- Obtener todos los productos -- R
   const getProducts = async () => {
     try {
       const products = await get(url);
@@ -26,6 +26,9 @@ const ProductsProvider = ({ children }) => {
       console.log("getProducts function - not working", error);
     }
   };
+
+  // ! CREATE PRODUCT -- Crear un nuevo producto -- C
+  const createProduct = async () => {};
 
   const data = { products };
   return (
