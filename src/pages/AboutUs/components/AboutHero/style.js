@@ -14,12 +14,15 @@ export const AboutHeroSection = styled.section`
 `;
 
 export const AboutHeroTitle = styled.h2`
-  font-size: 52px;
-  width: 50%;
+  width: 90%;
+  max-width: 1000px;
   text-align: center;
-  margin-bottom: -150px;
+  font-size: 58px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 900;
+  line-height: 80px;
   color: white;
-  font-weight: 800;
+  margin-bottom: -160px;
 `;
 
 export const AboutHeroBannerWrapper = styled.div`
