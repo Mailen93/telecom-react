@@ -5,7 +5,7 @@ export const ListBody = styled.div`
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 30px;
+  padding: 10px;
   width: 40%;
   border-radius: 10px;
   box-shadow: 23px 28px 61px -23px rgba(0, 0, 0, 0.97);

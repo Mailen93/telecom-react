@@ -7,13 +7,15 @@ export const ProductItemBody = styled.div`
   border-radius: 8px;
   display: flex;
   justify-content: space-around;
+  & > div:last-of-type {
+    border: none;
+  }
 `;
 
 export const ProductDetailWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 200px;
-  max-width: 200px;
   gap: 10px;
   border-right: 1px solid white;
   padding: 0 10px;
@@ -25,6 +27,7 @@ export const ProductDetailLabel = styled.label`
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0 auto;
+  border-bottom: 1px solid white;
 `;
 export const ProductDetail = styled.p`
   text-align: start;
