@@ -8,8 +8,11 @@ export const FormBody = styled.form`
   gap: 15px;
   width: 40%;
   background-color: ${theme.colors.primaryOrange};
-  height: fit-content;
+  height: 560px;
   border-radius: 10px;
+  box-shadow: 23px 28px 61px -23px rgba(0, 0, 0, 0.97);
+  -webkit-box-shadow: 23px 28px 61px -23px rgba(0, 0, 0, 0.97);
+  -moz-box-shadow: 23px 28px 61px -23px rgba(0, 0, 0, 0.97);
 `;
 
 export const FormTitle = styled.label`

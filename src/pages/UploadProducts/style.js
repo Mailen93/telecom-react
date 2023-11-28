@@ -6,5 +6,5 @@ export const UploadSection = styled.section`
   display: flex;
   background-color: ${theme.colors.primaryGreen};
   padding: 20px;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `;
