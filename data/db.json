@@ -59,19 +59,6 @@
       "age": "12",
       "units": 0,
       "description": "Poné a prueba tu inteligencia y táctica en la batalla por conquistar el mundo. ¡Cumplí las misiones y derribá a tus oponentes!"
-    },
-    {
-      "id": "1e4ade85-8fe8-4efc-ae9b-9d933cd0ef59",
-      "image": "/src/assets/ProductsImages/NewGame.png"
-    },
-    {
-      "id": "08c1b400-4cfe-4ef8-9c74-33ccfa3465e8",
-      "image": "/src/assets/ProductsImages/NewGame.png",
-      "name": "a",
-      "price": "1",
-      "players": "a",
-      "age": "as",
-      "description": "as"
     }
   ],
   "cart": []
