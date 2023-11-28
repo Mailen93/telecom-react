@@ -11,6 +11,7 @@ export const CardBody = styled.div`
   height: 520px;
   border-radius: 8px;
   max-width: 400px;
+  min-width: 400px;
   box-shadow: 14px 16px 44px 1px rgba(0, 0, 0, 0.48);
   -webkit-box-shadow: 14px 16px 44px 1px rgba(0, 0, 0, 0.48);
   -moz-box-shadow: 14px 16px 44px 1px rgba(0, 0, 0, 0.48);
