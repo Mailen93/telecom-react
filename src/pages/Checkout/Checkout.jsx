@@ -27,6 +27,11 @@ const Checkout = () => {
       }, 2000);
     }
   }, [cart]);
+
+  useEffect(() => {
+    document.title = "En un cumple! - Checkout";
+  }, []);
+
   return (
     <Styled.CheckoutSection>
       <Styled.ArticlesGroup>

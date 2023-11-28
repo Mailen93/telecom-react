@@ -19,20 +19,20 @@ const UploadForm = ({ selectedProduct, setSelectedProduct }) => {
   const [form, setForm] = useState({ id: uuidv4(), image: NewGame });
   const [formIsValid, setFormIsValid] = useState(false);
 
-  const validateForm = () => {
-    const isValid = uploadInputs.every((input) => {
-      const inputValue = form[input.id];
-      return inputValue !== undefined && inputValue !== "";
-    });
-    setFormIsValid(isValid);
-  };
+  // const validateForm = () => {
+  //   const isValid = uploadInputs.every((input) => {
+  //     const inputValue = form[input.id];
+  //     return inputValue !== undefined && inputValue !== "";
+  //   });
+  //   setFormIsValid(isValid);
+  // };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!formIsValid) {
-      alert("All fields are required!!");
-      return;
-    }
+    // if (!formIsValid) {
+    //   alert("All fields are required!!");
+    //   return;
+    // }
     if (selectedProduct) {
       await updateProduct(form.id, form);
       setSelectedProduct(null);
@@ -41,11 +41,11 @@ const UploadForm = ({ selectedProduct, setSelectedProduct }) => {
     }
 
     setForm({ id: uuidv4(), image: NewGame });
-    setFormIsValid(false);
+    //setFormIsValid(false);
   };
 
   const handleChange = (event) => {
-    validateForm();
+    //validateForm();
     const newItem = {
       ...form,
       [event.target.name]: event.target.value,

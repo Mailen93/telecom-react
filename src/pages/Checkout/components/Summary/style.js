@@ -47,4 +47,12 @@ export const SummaryItemTotal = styled.span`
   font-weight: 600;
 `;
 
-export const PayButton = styled.button``;
+export const PayButton = styled.button`
+  margin-top: 40px;
+  border: none;
+  background-color: ${theme.colors.primaryGreen};
+  color: white;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 24px;
+`;

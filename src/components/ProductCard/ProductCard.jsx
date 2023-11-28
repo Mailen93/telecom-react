@@ -12,16 +12,20 @@ import { UserGreen } from "../../assets/icons";
 
 // Contexts
 import CartContext from "../../contexts/CartContext";
+import Swal from "sweetalert2";
 
 const ProductCard = ({ product }) => {
   const { addToCartContext } = useContext(CartContext);
 
   const handleBuy = (product) => {
-    console.log(
-      "🚀 ~ file: ProductCard.jsx:19 ~ handleBuy ~ product:",
-      product,
-    );
     addToCartContext(product);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Producto añadido al carrito",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   };
 
   return (
@@ -46,13 +50,9 @@ const ProductCard = ({ product }) => {
             <Styled.Button
               $type={button.id}
               key={button.id}
-              onClick={
-                button.id === "comprar"
-                  ? () => {
-                      handleBuy(product);
-                    }
-                  : null
-              }
+              onClick={() => {
+                handleBuy(product);
+              }}
             >
               {button.label}
             </Styled.Button>

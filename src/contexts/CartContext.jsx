@@ -24,7 +24,7 @@ const CartProvider = ({ children }) => {
     } else {
       setCart((prevCart) => {
         const updatedCart = prevCart.map((item) =>
-          item.id === game.id ? { ...item, quantity: item.quantity + 1 } : item,
+          item.id === game.id ? { ...item, quantity: item.quantity + 1 } : item
         );
         window.localStorage.setItem("cart", JSON.stringify(updatedCart));
         return updatedCart;
@@ -56,11 +56,17 @@ const CartProvider = ({ children }) => {
     });
   };
 
+  const clearCartContext = () => {
+    setCart([]);
+    window.localStorage.removeItem("cart");
+  };
+
   const data = {
     addToCartContext,
     deleteProductCartContext,
     cart,
     deleteProductByQuantity,
+    clearCartContext,
   };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };

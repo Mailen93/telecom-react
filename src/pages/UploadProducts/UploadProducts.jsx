@@ -1,5 +1,5 @@
 // React
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Styles
 import * as Styled from "./style";
@@ -10,6 +10,10 @@ import ProductsList from "./components/ProductsList/ProductsList";
 
 const UploadProducts = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
+
+  useEffect(() => {
+    document.title = "En un cumple! - Alta";
+  }, []);
 
   console.log(selectedProduct);
   return (

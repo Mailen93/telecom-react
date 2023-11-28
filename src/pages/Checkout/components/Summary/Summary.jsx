@@ -1,13 +1,45 @@
 // React
-import React from "react";
+import React, { useContext } from "react";
 
 // Styles
 import * as Styled from "./style";
 import { summaryItems } from "../../../../utils/constants";
+import Swal from "sweetalert2";
+import theme from "../../../../utils/theme";
+import { useNavigate } from "react-router";
+import CartContext from "../../../../contexts/CartContext";
 
-// Utils
+const handleFinishCheckout = (clearCart) => {
+  Swal.fire({
+    title: "Está seguro?",
+    text: "Se debitará el pago de su tarjeta",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: theme.colors.primaryGreen,
+    cancelButtonColor: theme.colors.primaryRed,
+    cancelButtonText: "Cancelar",
+    confirmButtonText: "Si! Quiero mis juegos :)",
+  })
+    .then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Éxito",
+          text: "GRACIAS POR SU COMPRA!",
+          icon: "success",
+        });
+      }
+    })
+    .then(() => {
+      setTimeout(() => {
+        clearCart();
+        useNavigate("/");
+      }, 1000);
+    });
+};
 
 const Summary = ({ cart }) => {
+  const { clearCartContext } = useContext(CartContext);
+
   const calculateSummaryTotals = (id) => {
     switch (id) {
       case "products":
@@ -50,6 +82,13 @@ const Summary = ({ cart }) => {
           </Styled.SummaryItemLabel>
         ))}
       </Styled.SumaryDetailContainer>
+      <Styled.PayButton
+        onClick={() => {
+          handleFinishCheckout(clearCartContext);
+        }}
+      >
+        Finalizar Compra
+      </Styled.PayButton>
     </Styled.Summary>
   );
 };
