@@ -1,5 +1,5 @@
 // React
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 
 // Styles
 import * as Styled from "./style";
@@ -15,7 +15,7 @@ import { v4 as uuidv4 } from "uuid";
 import ProductsContext from "../../../../contexts/ProductsContext";
 
 const UploadForm = () => {
-  const { createProduct } = useContext(ProductsContext);
+  const { createProduct, products } = useContext(ProductsContext);
   const [form, setForm] = useState({ id: uuidv4(), image: NewGame });
 
   const handleSubmit = async (event) => {
@@ -33,6 +33,10 @@ const UploadForm = () => {
     setForm(newItem);
   };
 
+  useEffect(() => {
+    setForm({ id: uuidv4(), image: NewGame });
+  }, [products]);
+
   return (
     <Styled.FormBody>
       <Styled.FormTitle>Upload a Game</Styled.FormTitle>
@@ -43,6 +47,7 @@ const UploadForm = () => {
             onChange={handleChange}
             name={input.id}
             type={input.id === "price" ? "number" : "text"}
+            value={form[input.id] || ""}
           />
         </Styled.InputWrapper>
       ))}

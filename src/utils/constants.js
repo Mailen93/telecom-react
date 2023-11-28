@@ -87,8 +87,13 @@ export const summaryItems = [
 
 export const uploadInputs = [
   { id: "name", label: "Game Name" },
-  { id: "description", label: "Game Description" },
   { id: "price", label: "Game Price" },
   { id: "players", label: "Game Players" },
   { id: "age", label: "Players Age" },
+  { id: "description", label: "Game Description" },
+];
+
+export const prodcuctsListButtons = [
+  { id: "modify", label: "Modify Product" },
+  { id: "delete", label: "Delete Product" },
 ];

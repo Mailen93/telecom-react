@@ -89,6 +89,15 @@
       "age": "15",
       "units": 0,
       "description": " Poné a prueba tus conocimientos en distintas áreas mientras compartís momentos inolvidables con tus seres queridos."
+    },
+    {
+      "id": "068b1c22-8744-4ee9-8ee6-c9a1f1f39501",
+      "image": "/src/assets/ProductsImages/NewGame.png",
+      "name": "Lorenzo Lamas",
+      "price": "2",
+      "players": "2 a 3",
+      "age": "10",
+      "description": "Lo que es este game ! "
     }
   ],
   "cart": []

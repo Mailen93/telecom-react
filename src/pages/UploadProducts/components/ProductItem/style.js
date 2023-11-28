@@ -7,9 +7,15 @@ export const ProductItemBody = styled.div`
   border-radius: 8px;
   display: flex;
   justify-content: space-around;
-  & > div:last-of-type {
-    border: none;
+  & > div:first-of-type {
+    border-left: none;
   }
+  flex-direction: column;
+`;
+
+export const ProductDetailContainer = styled.div`
+  display: flex;
+  border: 1px solid white;
 `;
 
 export const ProductDetailWrapper = styled.div`
@@ -17,7 +23,7 @@ export const ProductDetailWrapper = styled.div`
   flex-direction: column;
   width: 200px;
   gap: 10px;
-  border-right: 1px solid white;
+  border-left: 1px solid white;
   padding: 0 10px;
 `;
 
@@ -39,4 +45,24 @@ export const ProductDetail = styled.p`
     display: none;
   }
   margin: 0 auto;
+`;
+
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+`;
+
+export const Button = styled.button`
+  padding: 10px 30px;
+  border: none;
+  border-radius: 4px;
+  background-color: ${({ $type }) =>
+    $type === "delete" ? theme.colors.primaryRed : theme.colors.primaryOrange};
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
 `;
