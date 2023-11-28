@@ -24,7 +24,6 @@ const Cart = () => {
     );
     return total;
   };
-  console.log(renderTotal());
 
   return (
     <>

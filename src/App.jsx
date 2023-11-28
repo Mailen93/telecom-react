@@ -16,8 +16,7 @@ import { useEffect } from "react";
 
 function App() {
   const location = useLocation();
-  const isCheckoutPage = location === "/checkout";
-
+  
 
   return (
     <ProductsProvider>
@@ -27,7 +26,7 @@ function App() {
           <Route path="/alta" element={<UploadProducts />} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
-        {!isCheckoutPage && <Cart />}
+        {location.pathname !== '/checkout' && <Cart />}
       </CartProvider>
     </ProductsProvider>
   );

@@ -79,3 +79,10 @@ export const addRemoveButtons = [
   {id: 'add', label: '+'},
   {id: 'remove', label: '-'}
 ]
+
+export const summaryItems = [
+  {id: 'products', label: 'Total Productos'},
+  {id: 'shipping', label: 'Envío'},
+  {id: 'taxes', label: 'IVA'},
+  {id: 'totalWithTaxes', label: 'Total + IVA'},
+]
